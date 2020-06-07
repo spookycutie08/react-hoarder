@@ -19,4 +19,6 @@ const getItemsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => console.error('could not get items:', err));
 });
 
-export default { getItemsByUid };
+const getSingleItem = (itemId) => axios.get(`${baseUrl}/items/${itemId}.json`);
+
+export default { getItemsByUid, getSingleItem };

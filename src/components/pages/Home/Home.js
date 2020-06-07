@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import authData from '../../../helpers/data/authData';
 import itemsData from '../../../helpers/data/itemsData';
@@ -35,8 +34,6 @@ class Home extends React.Component {
         <div className="d-flex flex-wrap">
           {buildItemCards}
         </div>
-        {/* <Link className="btn btn-secondary" onClick={this.editEvent}><i class="fas fa-pencil-alt"></i> Edit</Link> */}
-        {/* <Link className="btn btn-primary" onClick={this.singleViewEvent}><i class="fas fa-search"></i> View</Link> */}
       </div>
     );
   }
