@@ -5,7 +5,9 @@ import 'firebase/auth';
 import './App.scss';
 
 import Auth from '../Auth/Auth';
+import Home from '../components/pages/Home/Home';
 import MyNavbar from '../MyNavbar/MyNavbar';
+import New from '../components/pages/New/New';
 
 import fbConnection from '../helpers/data/connection';
 
@@ -35,6 +37,8 @@ class App extends React.Component {
       <div className="App">
         <MyNavbar />
         <Auth />
+        <Home />
+        <New />
       </div>
     );
   }
