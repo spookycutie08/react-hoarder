@@ -15,7 +15,7 @@ import Auth from '../components/pages/Auth/Auth';
 import Edit from '../components/pages/Edit/Edit';
 import Home from '../components/pages/Home/Home';
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
-import New from '../components/pages/New/New';
+import NewItem from '../components/pages/NewItem/NewItem';
 import SingleItem from '../components/pages/SingleItem/SingleItem';
 
 import fbConnection from '../helpers/data/connection';
@@ -63,11 +63,11 @@ class App extends React.Component {
         <BrowserRouter>
           <React.Fragment>
             <MyNavbar authed={authed}/>
-            <div className="container">
+            <div className="container col-12">
               <div className="row">
                 <Switch>
                   <PrivateRoute path='/home' component={Home} authed={authed} />
-                  <PrivateRoute path='/new' component={New} authed={authed} />
+                  <PrivateRoute path='/stuff/new' component={NewItem} authed={authed} />
                   <PrivateRoute path='/edit/:itemId' component={Edit} authed={authed} />
                   <PrivateRoute path='/stuff/:itemId' component={SingleItem} authed={authed} />
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
