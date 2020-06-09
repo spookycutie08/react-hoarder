@@ -18,7 +18,7 @@ class SingleItem extends React.Component {
   render() {
     const { item } = this.state;
     return (
-      <div className="SingleItem">
+      <div className="SingleItem col-6 offset-3">
         <h1>{item.itemName}</h1>
         <img src={item.itemImage} alt="item"/>
         <h5 className="card-text">{item.itemDescription}</h5>
