@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './SingleItem.scss';
 import itemsData from '../../../helpers/data/itemsData';
@@ -24,12 +25,15 @@ class SingleItem extends React.Component {
 
   render() {
     const { item } = this.state;
+    const { itemId } = this.props.match.params;
+    const editLink = `/edit/${itemId}`;
     return (
       <div className="SingleItem col-6 offset-3">
         <h1>{item.itemName}</h1>
         <img src={item.itemImage} alt="item"/>
         <h5 className="card-text">{item.itemDescription}</h5>
-          <button className="btn btn-danger" onClick={this.removeItem}><i className="fas fa-times"></i> Delete</button>
+        <Link className="btn btn-secondary" to={editLink}><i className="fas fa-pencil-alt"></i> Edit</Link>
+        <button className="btn btn-danger" onClick={this.removeItem}><i className="fas fa-times"></i> Delete</button>
       </div>
     );
   }
