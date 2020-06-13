@@ -12,7 +12,7 @@ import {
 import './App.scss';
 
 import Auth from '../components/pages/Auth/Auth';
-import Edit from '../components/pages/Edit/Edit';
+import Edit from '../components/pages/EditItem/EditItem';
 import Home from '../components/pages/Home/Home';
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 import NewItem from '../components/pages/NewItem/NewItem';
